@@ -17,6 +17,8 @@ t_span = [0, 10]
 const_mean = [ 0.09350985, 0.58026128, 0.43635995, 0.54207802, -0.45358854, 0.6839959, 0.36064184, 0.65045037]
 k1 ,k2, phi_in ,phi_out , v , km , klanda , alphaBeta = const_mean
 initial_conditions = [2, 0]  
+n = 1
+landa0 = 0.43
 
 # Solve the ODE of two variables
 sol1 = solve_ivp(model, t_span, initial_conditions, args=(n,k1,k2, phi_in, phi_out, 0, v, km, klanda, landa0), t_eval=np.linspace(0, 10, 100))
